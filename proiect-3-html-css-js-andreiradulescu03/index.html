@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/autocomplete.css" />
+    <link rel="stylesheet" href="styles/weather.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather App</h1>
+      <div id="searchContainer">
+        <input type="text" id="cityInput" placeholder="Enter a city name" />
+        <button id="addToFavoritesButton" class="heart-button"></button>
+      </div>
+
+      <div id="loadingSpinner"></div>
+      <div id="backgroundImageContainer"></div>
+      <div id="favoriteCitiesContainer">
+        <h3>Favorites</h3>
+        <ul id="favoriteCitiesList"></ul>
+      </div>
+
+      <div id="cityList"></div>
+      <div id="weatherCard" class="weather-card">
+        <!-- Weather data will be dynamically inserted here -->
+      </div>
+
+      <button id="forecastButton">View 5-Day Forecast</button>
+      <div id="forecastContainer" class="forecast-container"></div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/weather.js"></script>
+  </body>
+</html>

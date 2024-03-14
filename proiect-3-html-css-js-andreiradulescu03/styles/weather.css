@@ -1,0 +1,103 @@
+#loadingSpinner {
+    display: none;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+#forecastButton {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Define a breakpoint for mobile devices (adjust the max-width as needed) */
+@media only screen and (max-width: 600px) {
+    .forecast-container {
+        /* Change the display property for smaller screens, for example, block */
+        display: block;
+        /* Add overflow property to control content overflow */
+        overflow: auto;
+    }
+
+    .forecast-day {
+        /* Add any additional styles for each forecast day on smaller screens */
+        margin-bottom: 10px;
+    }
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.forecast-day {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 7px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.weather-card {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#backgroundImageContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Set z-index to place it behind other elements */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Add a subtle blur effect for better readability of content */
+}
+
+#favoriteCitiesContainer {
+    margin-top: 20px;
+}
+
+#favoriteCitiesList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#favoriteCitiesList li {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.heart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 5px; /* Adjust margin as needed */
+}
+
+.heart-button::before {
+    content: '\2665'; /* Unicode heart character */
+    font-size: 24px;
+    color: red; /* Adjust color as needed */
+}
